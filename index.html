@@ -2,148 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Syed Parvez — Data Analyst &amp; AI Product Builder</title>
 <meta name="description" content="Syed Parvez — Certified Power BI Data Analyst Associate with ~4 years in SQL, Power BI, Python and analytics automation. Founder of LEHAR AI Studio." />
 <meta name="author" content="Syed Parvez" />
+<meta name="theme-color" content="#2783DE" />
 <meta property="og:title" content="Syed Parvez — Data Analyst &amp; AI Product Builder" />
 <meta property="og:description" content="SQL, Power BI, Python, ETL validation and AI automation. Founder of LEHAR AI Studio. Udemy instructor to 7,000+ students." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232783DE'/%3E%3Ctext x='50' y='68' font-family='Helvetica,Arial' font-size='52' font-weight='700' fill='white' text-anchor='middle'%3ESP%3C/text%3E%3C/svg%3E" />
-<style>
-  :root {
-    --text: #2C2C2B;
-    --muted: #7D7A75;
-    --canvas: #FFFFFF;
-    --soft: #F9F8F7;
-    --surface: #F0EFED;
-    --border: #E6E5E3;
-    --accent: #2783DE;
-    --accent-soft: #E5F2FC;
-    --radius: 8px;
-    --maxw: 900px;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --text: #FFFFFF;
-      --muted: rgba(255,255,255,.65);
-      --canvas: #191919;
-      --soft: #202020;
-      --surface: #202020;
-      --border: rgba(255,255,255,.20);
-      --accent: #5E9FE8;
-      --accent-soft: rgba(94,159,232,.12);
-    }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body {
-    margin: 0;
-    background: var(--canvas);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-
-  .nav {
-    position: sticky; top: 0; z-index: 20;
-    background: var(--canvas);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
-  .brand { font-weight: 650; letter-spacing: -.01em; color: var(--text); }
-  .nav-links { display: flex; gap: 24px; }
-  .nav-links a { color: var(--muted); font-size: 14px; }
-  .nav-links a:hover { color: var(--text); text-decoration: none; }
-  @media (max-width: 640px) { .nav-links { display: none; } }
-
-  .hero { padding: 64px 0 56px; display: grid; grid-template-columns: 1fr 200px; gap: 48px; align-items: center; }
-  .portrait {
-    width: 200px; height: 200px; border-radius: 16px; object-fit: cover;
-    border: 1px solid var(--border); display: block;
-  }
-  @media (max-width: 720px) {
-    .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 40px; }
-    .hero-media { order: -1; }
-    .portrait { width: 112px; height: 112px; border-radius: 50%; }
-  }
-  .eyebrow {
-    display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-    color: var(--accent); background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; margin-bottom: 20px;
-  }
-  h1 { font-size: clamp(32px, 5.5vw, 44px); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 16px; }
-  .lede { font-size: 18px; color: var(--muted); max-width: 56ch; margin: 0 0 28px; }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
-    padding: 0 20px; border-radius: var(--radius); font-size: 15px; font-weight: 550;
-    border: 1px solid var(--border); color: var(--text); background: var(--canvas);
-  }
-  .btn:hover { background: var(--soft); text-decoration: none; }
-  .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .btn-primary:hover { background: #1f6fbd; border-color: #1f6fbd; }
-
-  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-bottom: 8px; }
-  .metric { background: var(--soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-  .metric b { display: block; font-size: 26px; letter-spacing: -.02em; line-height: 1.2; }
-  .metric span { font-size: 13px; color: var(--muted); }
-  @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
-
-  section { padding: 56px 0; border-top: 1px solid var(--border); }
-  h2 { font-size: 24px; letter-spacing: -.02em; margin: 0 0 8px; }
-  .section-note { color: var(--muted); font-size: 15px; margin: 0 0 32px; }
-
-  .job { padding: 24px 0; border-bottom: 1px solid var(--border); }
-  .job:last-child { border-bottom: 0; padding-bottom: 0; }
-  .job-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
-  .job h3 { font-size: 17px; margin: 0; letter-spacing: -.01em; }
-  .job .org { color: var(--muted); font-size: 15px; font-weight: 400; }
-  .job .when { color: var(--muted); font-size: 14px; white-space: nowrap; }
-  .job ul { margin: 12px 0 0; padding-left: 20px; }
-  .job li { margin-bottom: 8px; }
-  .job li::marker { color: var(--accent); }
-
-  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
-  .card { border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; }
-  .card h3 { margin: 0 0 8px; font-size: 17px; letter-spacing: -.01em; }
-  .card p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
-  .card .stack { margin-top: auto; font-size: 14px; color: var(--text); font-weight: 550; }
-  .card .stack + .link { margin-top: 12px; }
-  .card .link { font-size: 15px; font-weight: 550; }
-
-  .skill-group { margin-bottom: 24px; }
-  .skill-group:last-child { margin-bottom: 0; }
-  .skill-group h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 12px; font-weight: 600; }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .tag { font-size: 14px; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--text); }
-
-  .split { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-  @media (max-width: 720px) { .split { grid-template-columns: 1fr; gap: 24px; } }
-  .plain { list-style: none; margin: 0; padding: 0; }
-  .plain li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
-  .plain li:last-child { border-bottom: 0; }
-  .plain small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
-
-  .contact { background: var(--soft); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
-  .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-
-  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
-
-  @media print {
-    .nav, .actions, .contact-links { display: none; }
-    body { font-size: 11pt; }
-    section { padding: 16pt 0; }
-  }
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
