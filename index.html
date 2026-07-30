@@ -59,19 +59,29 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
-  .brand { font-weight: 650; letter-spacing: -.01em; color: var(--text); }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -.01em; color: var(--text); }
+  .brand img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
   .nav-links { display: flex; gap: 24px; }
   .nav-links a { color: var(--muted); font-size: 14px; }
   .nav-links a:hover { color: var(--text); text-decoration: none; }
   @media (max-width: 640px) { .nav-links { display: none; } }
 
-  .hero { padding: 72px 0 56px; }
+  .hero { padding: 64px 0 56px; display: grid; grid-template-columns: 1fr 200px; gap: 48px; align-items: center; }
+  .portrait {
+    width: 200px; height: 200px; border-radius: 16px; object-fit: cover;
+    border: 1px solid var(--border); display: block;
+  }
+  @media (max-width: 720px) {
+    .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 48px; }
+    .hero-media { order: -1; }
+    .portrait { width: 112px; height: 112px; border-radius: 50%; }
+  }
   .eyebrow {
     display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
     color: var(--accent); background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; margin-bottom: 20px;
   }
-  h1 { font-size: clamp(34px, 6vw, 48px); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 16px; }
-  .lede { font-size: 18px; color: var(--muted); max-width: 62ch; margin: 0 0 28px; }
+  h1 { font-size: clamp(32px, 5.5vw, 44px); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 16px; }
+  .lede { font-size: 18px; color: var(--muted); max-width: 56ch; margin: 0 0 28px; }
   .actions { display: flex; flex-wrap: wrap; gap: 12px; }
   .btn {
     display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
@@ -82,7 +92,7 @@
   .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
   .btn-primary:hover { background: #1f6fbd; border-color: #1f6fbd; }
 
-  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-bottom: 8px; }
   .metric { background: var(--soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
   .metric b { display: block; font-size: 26px; letter-spacing: -.02em; line-height: 1.2; }
   .metric span { font-size: 13px; color: var(--muted); }
@@ -104,10 +114,12 @@
 
   .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
-  .card { border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .card { border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; }
   .card h3 { margin: 0 0 8px; font-size: 17px; letter-spacing: -.01em; }
   .card p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
-  .card p:last-child { margin-bottom: 0; }
+  .card .stack { margin-top: auto; font-size: 14px; color: var(--text); font-weight: 550; }
+  .card .stack + .link { margin-top: 12px; }
+  .card .link { font-size: 15px; font-weight: 550; }
 
   .skill-group { margin-bottom: 24px; }
   .skill-group:last-child { margin-bottom: 0; }
@@ -138,7 +150,7 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top">Syed Parvez</a>
+    <a class="brand" href="#top"><img src="assets/photo.webp" alt="" aria-hidden="true" onerror="this.style.display='none'" />Syed Parvez</a>
     <nav class="nav-links" aria-label="Section navigation">
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
@@ -152,15 +164,22 @@
 <main id="top">
 
   <div class="wrap hero">
-    <span class="eyebrow">Gurugram, India</span>
-    <h1>Data analyst who ships AI products.</h1>
-    <p class="lede">Certified Power BI Data Analyst Associate with nearly four years across SQL, Power BI, Python, ETL validation and analytics automation — and a builder of AI apps, agents and automation workflows used by real customers.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="mailto:almaas.canada@gmail.com">Get in touch</a>
-      <a class="btn" href="https://www.linkedin.com/in/syedalmaas" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://github.com/almaas21" target="_blank" rel="noopener">GitHub</a>
+    <div class="hero-copy">
+      <span class="eyebrow">Gurugram, India</span>
+      <h1>Data analyst who ships AI products.</h1>
+      <p class="lede">Certified Power BI Data Analyst Associate with nearly four years across SQL, Power BI, Python, ETL validation and analytics automation — and the builder behind LEHAR AI Studio.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:almaas3126@gmail.com">Get in touch</a>
+        <a class="btn" href="https://www.fiverr.com/almaasparvez" target="_blank" rel="noopener">Hire me on Fiverr</a>
+        <a class="btn" href="https://www.linkedin.com/in/syedalmaas" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
+    <div class="hero-media">
+      <img class="portrait" src="assets/photo.webp" alt="Portrait of Syed Parvez" width="200" height="200" />
+    </div>
+  </div>
 
+  <div class="wrap">
     <div class="metrics">
       <div class="metric"><b>~4 yrs</b><span>Analytics experience</span></div>
       <div class="metric"><b>7,000+</b><span>Students taught</span></div>
@@ -193,7 +212,7 @@
           <span class="when">2023 — Present</span>
         </div>
         <ul>
-          <li>Built and launched an AI creative app on Google Play for image, video and creator-focused content generation.</li>
+          <li>Built and launched <a href="https://play.google.com/store/apps/details?id=com.lahar.ai" target="_blank" rel="noopener">LEHAR AI Studio on Google Play</a> — an AI app for image, video and creator-focused content generation.</li>
           <li>Developed cross-platform app and backend services with Flutter, FastAPI, Python and third-party AI APIs.</li>
           <li>Owned the full product cycle: architecture, integrations, payments, deployment, testing and release management.</li>
         </ul>
@@ -213,7 +232,7 @@
 
       <article class="job">
         <div class="job-head">
-          <h3>AI Automation &amp; Full-Stack Freelancer <span class="org">· Fiverr</span></h3>
+          <h3>AI Automation &amp; Full-Stack Freelancer <span class="org">· <a href="https://www.fiverr.com/almaasparvez" target="_blank" rel="noopener">Fiverr</a></span></h3>
           <span class="when">Project-based</span>
         </div>
         <ul>
@@ -255,22 +274,24 @@
         <article class="card">
           <h3>LEHAR AI Studio</h3>
           <p>An AI creative app on Google Play that turns prompts into images and video for creators, with automation-assisted content workflows.</p>
-          <p><strong>Flutter · FastAPI · Python · AI APIs</strong></p>
+          <p class="stack">Flutter · FastAPI · Python · AI APIs</p>
+          <a class="link" href="https://play.google.com/store/apps/details?id=com.lahar.ai" target="_blank" rel="noopener">View on Google Play →</a>
         </article>
         <article class="card">
-          <h3>AI-powered mobile &amp; web apps</h3>
-          <p>Production apps combining generative AI, backend APIs, payments and cloud infrastructure — from ideation through post-launch iteration.</p>
-          <p><strong>Cloud infra · API integration · Monetisation</strong></p>
+          <h3>AI automation for clients</h3>
+          <p>AI agents, GPT chatbots, voice bots and CRM workflow automations delivered as freelance engagements with a 5.0 seller rating.</p>
+          <p class="stack">n8n · LangChain · ComfyUI</p>
+          <a class="link" href="https://www.fiverr.com/almaasparvez" target="_blank" rel="noopener">See my Fiverr profile →</a>
         </article>
         <article class="card">
           <h3>Analytics automation</h3>
           <p>Automated reporting pipelines, reconciliation checks and dashboard QA that cut manual effort and improved reporting reliability.</p>
-          <p><strong>SQL · Power BI · DAX · Python</strong></p>
+          <p class="stack">SQL · Power BI · DAX · Python</p>
         </article>
         <article class="card">
-          <h3>Agents &amp; workflow automation</h3>
-          <p>Client AI agents, GPT chatbots, voice bots and CRM workflow automations delivered as freelance engagements.</p>
-          <p><strong>n8n · LangChain · ComfyUI</strong></p>
+          <h3>Certification courses</h3>
+          <p>Practice-test courses and explanations for AWS, Azure, Salesforce and Security+ certifications, used by 7,000+ learners.</p>
+          <p class="stack">AWS SAA-C03 · AZ-900 · ADM-201 · SY0-701</p>
         </article>
       </div>
     </div>
@@ -330,8 +351,9 @@
         <h2>Let's work together</h2>
         <p class="section-note">Open to data analytics roles and AI automation projects.</p>
         <div class="contact-links">
-          <a class="btn btn-primary" href="mailto:almaas.canada@gmail.com">almaas.canada@gmail.com</a>
-          <a class="btn" href="tel:+919936720440">+91 99367 20440</a>
+          <a class="btn btn-primary" href="mailto:almaas3126@gmail.com">almaas3126@gmail.com</a>
+          <a class="btn" href="https://www.fiverr.com/almaasparvez" target="_blank" rel="noopener">Fiverr</a>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.lahar.ai" target="_blank" rel="noopener">LEHAR AI Studio</a>
           <a class="btn" href="https://www.linkedin.com/in/syedalmaas" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
