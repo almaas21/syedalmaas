@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Syed Parvez — Data Analyst &amp; AI Product Builder</title>
+<meta name="description" content="Syed Parvez — Certified Power BI Data Analyst Associate with ~4 years in SQL, Power BI, Python and analytics automation. Founder of LEHAR AI Studio." />
+<meta name="author" content="Syed Parvez" />
+<meta property="og:title" content="Syed Parvez — Data Analyst &amp; AI Product Builder" />
+<meta property="og:description" content="SQL, Power BI, Python, ETL validation and AI automation. Founder of LEHAR AI Studio. Udemy instructor to 7,000+ students." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232783DE'/%3E%3Ctext x='50' y='68' font-family='Helvetica,Arial' font-size='52' font-weight='700' fill='white' text-anchor='middle'%3ESP%3C/text%3E%3C/svg%3E" />
+<style>
+  :root {
+    --text: #2C2C2B;
+    --muted: #7D7A75;
+    --canvas: #FFFFFF;
+    --soft: #F9F8F7;
+    --surface: #F0EFED;
+    --border: #E6E5E3;
+    --accent: #2783DE;
+    --accent-soft: #E5F2FC;
+    --radius: 8px;
+    --maxw: 900px;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #FFFFFF;
+      --muted: rgba(255,255,255,.65);
+      --canvas: #191919;
+      --soft: #202020;
+      --surface: #202020;
+      --border: rgba(255,255,255,.20);
+      --accent: #5E9FE8;
+      --accent-soft: rgba(94,159,232,.12);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
+  .brand { font-weight: 650; letter-spacing: -.01em; color: var(--text); }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a { color: var(--muted); font-size: 14px; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 640px) { .nav-links { display: none; } }
+
+  .hero { padding: 72px 0 56px; }
+  .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; margin-bottom: 20px;
+  }
+  h1 { font-size: clamp(34px, 6vw, 48px); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 16px; }
+  .lede { font-size: 18px; color: var(--muted); max-width: 62ch; margin: 0 0 28px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+    padding: 0 20px; border-radius: var(--radius); font-size: 15px; font-weight: 550;
+    border: 1px solid var(--border); color: var(--text); background: var(--canvas);
+  }
+  .btn:hover { background: var(--soft); text-decoration: none; }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #1f6fbd; border-color: #1f6fbd; }
+
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+  .metric { background: var(--soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .metric b { display: block; font-size: 26px; letter-spacing: -.02em; line-height: 1.2; }
+  .metric span { font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+
+  section { padding: 56px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 24px; letter-spacing: -.02em; margin: 0 0 8px; }
+  .section-note { color: var(--muted); font-size: 15px; margin: 0 0 32px; }
+
+  .job { padding: 24px 0; border-bottom: 1px solid var(--border); }
+  .job:last-child { border-bottom: 0; padding-bottom: 0; }
+  .job-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+  .job h3 { font-size: 17px; margin: 0; letter-spacing: -.01em; }
+  .job .org { color: var(--muted); font-size: 15px; font-weight: 400; }
+  .job .when { color: var(--muted); font-size: 14px; white-space: nowrap; }
+  .job ul { margin: 12px 0 0; padding-left: 20px; }
+  .job li { margin-bottom: 8px; }
+  .job li::marker { color: var(--accent); }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+  .card { border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .card h3 { margin: 0 0 8px; font-size: 17px; letter-spacing: -.01em; }
+  .card p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .skill-group { margin-bottom: 24px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-group h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 12px; font-weight: 600; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-size: 14px; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+
+  .split { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  @media (max-width: 720px) { .split { grid-template-columns: 1fr; gap: 24px; } }
+  .plain { list-style: none; margin: 0; padding: 0; }
+  .plain li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+  .plain li:last-child { border-bottom: 0; }
+  .plain small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+  .contact { background: var(--soft); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+
+  @media print {
+    .nav, .actions, .contact-links { display: none; }
+    body { font-size: 11pt; }
+    section { padding: 16pt 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Syed Parvez</a>
+    <nav class="nav-links" aria-label="Section navigation">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <span class="eyebrow">Gurugram, India</span>
+    <h1>Data analyst who ships AI products.</h1>
+    <p class="lede">Certified Power BI Data Analyst Associate with nearly four years across SQL, Power BI, Python, ETL validation and analytics automation — and a builder of AI apps, agents and automation workflows used by real customers.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:almaas.canada@gmail.com">Get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/syedalmaas" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/almaas21" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><b>~4 yrs</b><span>Analytics experience</span></div>
+      <div class="metric"><b>7,000+</b><span>Students taught</span></div>
+      <div class="metric"><b>5.0★</b><span>Fiverr seller rating</span></div>
+      <div class="metric"><b>40+</b><span>Analysts trained</span></div>
+    </div>
+  </div>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="section-note">Analytics, product engineering and technical education.</p>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Data Analyst <span class="org">· TELUS International AI Data Solutions</span></h3>
+          <span class="when">Aug 2022 — Present</span>
+        </div>
+        <ul>
+          <li>Analysed large-scale web, image and text datasets to validate quality and improve search relevance, lifting model calibration accuracy by 14%.</li>
+          <li>Ran data reconciliation and structured research checks that cut false-positive data anomalies by 18%.</li>
+          <li>Safeguarded dashboard and reporting accuracy through structured QA, validation and stakeholder feedback loops.</li>
+          <li>Delivered Power BI and cloud-workflow training that enabled 40+ analysts to adopt self-service reporting.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Founder &amp; Developer <span class="org">· LEHAR AI Studio</span></h3>
+          <span class="when">2023 — Present</span>
+        </div>
+        <ul>
+          <li>Built and launched an AI creative app on Google Play for image, video and creator-focused content generation.</li>
+          <li>Developed cross-platform app and backend services with Flutter, FastAPI, Python and third-party AI APIs.</li>
+          <li>Owned the full product cycle: architecture, integrations, payments, deployment, testing and release management.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Technical Instructor <span class="org">· Udemy &amp; Independent</span></h3>
+          <span class="when">2023 — Present</span>
+        </div>
+        <ul>
+          <li>Published IT certification practice courses reaching 7,000+ students across cloud, security and Microsoft pathways.</li>
+          <li>Authored scenario-based questions and explanations for AWS SAA-C03, AZ-900, Salesforce ADM-201 and CompTIA Security+ SY0-701.</li>
+          <li>Tutored learners on Power BI, DAX, data modelling and analytics workflows.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>AI Automation &amp; Full-Stack Freelancer <span class="org">· Fiverr</span></h3>
+          <span class="when">Project-based</span>
+        </div>
+        <ul>
+          <li>Delivered AI agents, GPT chatbots, voice bots and smart workflows using n8n, ComfyUI, LangChain and cloud APIs.</li>
+          <li>Maintained a 5.0 seller rating across completed orders for fast, secure and business-ready AI solutions.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Data Analyst <span class="org">· The Pole Star</span></h3>
+          <span class="when">Oct 2021 — Aug 2022</span>
+        </div>
+        <ul>
+          <li>Engineered and validated complex datasets in Excel, SQL and Power BI, improving query performance by 25%.</li>
+          <li>Automated reporting pipelines and dashboards, removing 12 hours of manual reporting each week.</li>
+          <li>Supported legacy database migration with 99.9% data integrity during transfers.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>QA Technician / Team Lead <span class="org">· Onward Plastics</span></h3>
+          <span class="when">Mar 2019 — May 2021</span>
+        </div>
+        <ul>
+          <li>Analysed SAP/Oracle quality-control data to surface trends, exceptions and preventative tracking opportunities.</li>
+          <li>Led training and compliance checks that improved team evaluation pass rates by 20%.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="section-note">Products built end to end — idea, architecture, launch.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>LEHAR AI Studio</h3>
+          <p>An AI creative app on Google Play that turns prompts into images and video for creators, with automation-assisted content workflows.</p>
+          <p><strong>Flutter · FastAPI · Python · AI APIs</strong></p>
+        </article>
+        <article class="card">
+          <h3>AI-powered mobile &amp; web apps</h3>
+          <p>Production apps combining generative AI, backend APIs, payments and cloud infrastructure — from ideation through post-launch iteration.</p>
+          <p><strong>Cloud infra · API integration · Monetisation</strong></p>
+        </article>
+        <article class="card">
+          <h3>Analytics automation</h3>
+          <p>Automated reporting pipelines, reconciliation checks and dashboard QA that cut manual effort and improved reporting reliability.</p>
+          <p><strong>SQL · Power BI · DAX · Python</strong></p>
+        </article>
+        <article class="card">
+          <h3>Agents &amp; workflow automation</h3>
+          <p>Client AI agents, GPT chatbots, voice bots and CRM workflow automations delivered as freelance engagements.</p>
+          <p><strong>n8n · LangChain · ComfyUI</strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="section-note">What I use day to day.</p>
+
+      <div class="skill-group">
+        <h3>Data &amp; analytics</h3>
+        <div class="tags">
+          <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Python</span><span class="tag">Data modeling</span><span class="tag">ETL / ELT</span><span class="tag">Data validation</span><span class="tag">Reconciliation</span><span class="tag">Query optimization</span><span class="tag">Excel</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Cloud &amp; platforms</h3>
+        <div class="tags">
+          <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Databricks</span><span class="tag">Redshift</span><span class="tag">Git</span><span class="tag">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>AI &amp; product</h3>
+        <div class="tags">
+          <span class="tag">AI agents</span><span class="tag">LangChain</span><span class="tag">n8n</span><span class="tag">ComfyUI</span><span class="tag">GPT chatbots</span><span class="tag">Voice bots</span><span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">API integration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education &amp; certifications</h2>
+      <p class="section-note">Formal study and credentials.</p>
+      <div class="split">
+        <ul class="plain">
+          <li>Bachelor of Computer Applications (BCA)<small>SRM University</small></li>
+          <li>Associate Diploma in Data Science<small>IIIT Bangalore</small></li>
+          <li>Diploma in Business Management<small>Conestoga College, Canada</small></li>
+        </ul>
+        <ul class="plain">
+          <li>Power BI Data Analyst Associate (PL-300)<small>Microsoft Certified</small></li>
+          <li>Azure Fundamentals (AZ-900)<small>Microsoft</small></li>
+          <li>Certified Data Science (Basic)<small>Cutshort</small></li>
+          <li>Full Stack Software Engineering<small>Foundation Programme</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Let's work together</h2>
+        <p class="section-note">Open to data analytics roles and AI automation projects.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:almaas.canada@gmail.com">almaas.canada@gmail.com</a>
+          <a class="btn" href="tel:+919936720440">+91 99367 20440</a>
+          <a class="btn" href="https://www.linkedin.com/in/syedalmaas" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Syed Parvez · Built and hosted on GitHub Pages</div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
